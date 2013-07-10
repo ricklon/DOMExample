@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>DOM and Javascript</title>
+<link href="prettify.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="prettify.js"></script>
+<script type="text/javascript" src="./json2.js"></script>
+<link href="./a5.css" type="text/css" rel="stylesheet"/>
+<script src="./a5.js" type="text/javascript"></script>
+
+</head>
+<body onload="assignListeners();">
+<div id="a3title">Document Object Mode (DOM)</div>
+
+<div>DOM Selection, Create, and Append</div>
+<br />
+<div>Resources for assignment:</div>
+<ul>
+<li><a href="http://getfirebug.com/">Firebug: firefox add on</a></li>
+<li><a href="http://getfirebug.com/javascript">Firebug: Javascript debugging</a></li>
+<li><a href="http://getfirebug.com/logging">Firebug: How to use logging</a></li>
+<li><a href="http://www.w3schools.com/HTMLDOM/default.asp">W3 Schools DOM Reference </a></li>
+<li><a href="http://www.howtocreate.co.uk/tutorials/javascript/dombasics">JavaScript tutorial - DOM nodes and tree</a></li>
+</ul>
+
+<div>Complete functions in the a5.js file that correspond to each question. Clicking on the question button in each question calls the function and shows the result in the Firebug console using console.log(). Use the log to determine if your function is working.</div>
+<br />
+<ol>
+<li>Create a Node "ol" <br />
+<button id="q1" type="button">Question 1</button>
+<pre class="prettyprint">
+function createElem (elem) { }
+</pre>
+</li>
+<li>Create an array of Nodes <br />
+<button id="q2" type="button">Question 2</button>
+<pre class="prettyprint">
+function createElemList (elem, n) { }
+</pre>
+</li>
+<li>Create a Text Node <br />
+<button id="q3" type="button">Question 3</button>
+<pre class="prettyprint">
+function createTextNode(text) { }
+</pre>
+</li>
+<li>Append a Text Node to a Node <br />
+<button id="q4" type="button">Question 4</button>
+<pre class="prettyprint">
+function appendTextNode(elem, text) {}
+</pre>
+</li>
+<li>Add an attibute to to a Node <br />
+<button id="q5" type="button">Question 5</button>
+<pre class="prettyprint">
+function addAttrNode(elem, attr, text) {}
+</pre>
+</li>
+<li>Change the style assigned to an element. <br />
+<button id="q6" type="button">Question 6</button>
+<pre class="prettyprint">
+function appendAttr(elem, attr, value) {}
+</pre>
+</li>
+<li>Do a getElementsByTagName and append the same text node to each one. <br />
+<button id="q7" type="button">Question 7</button>
+<pre class="prettyprint">
+function appendTextNode(list, textnode) {}
+</pre>
+</li>
+</ol>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+body {
+	font-family:Verdana,Arial,Helv,Helvetica,sans-serif;
+	font-size:12pt;
+}
+
+div {
+	font-weight: bold;	
+}
+
+li.highlight:hover  {
+	background:yellow;	
+}
+
+li.backlight:hover  {
+	background:blue;	
+}
