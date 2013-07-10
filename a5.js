@@ -1,26 +1,33 @@
+$(document).ready(function() {
+    
+    assignListeners();
+    
+    
+    });
+
 function assignListeners() {
     //w3c events
-    document.getElementById("q1").addEventListener("click", function() {
+    $("#q1").click( function() {
         console.debug("q1: " + createElem("ol"));
-    }, true);
-    document.getElementById("q2").addEventListener("click", function() {
+    });
+    $("#q2").click( function() {
         console.debug("q2: createElemList(\"li\",3)" + createElemList("li", 3));
-    }, true);
-    document.getElementById("q3").addEventListener("click", function() {
+    });
+   $("#q3").click( function() {
         console.debug("q3: createTextNode(\"This is a textnode.\")" + createTextNode("This is a textnode"));
-    }, true);
-    document.getElementById("q4").addEventListener("click", function() {
+    });
+    $("#q4").click( function() {
         console.debug("q4: appendTextNode(createElem(\"li\"),\"This is a textnode.\")" + appendTextNode(createElem("li"), "This is a textnode"));
-    }, true);
-    document.getElementById("q5").addEventListener("click", function() {
+    });
+    $("#q5").click( function() {
         console.debug("q5: addAttrNode(createElem(\"li\"),\"class\", \"highlight\")" + addAttrNode(createElem("li"), "class", "highlight"));
-    }, true);
-    document.getElementById("q6").addEventListener("click", function() {
+    });
+    $("#q6").click( function() {
         console.debug("q6: appendAttr(createElem(\"li\"),\"class\", \"backlight\")" + appendAttr(createElem("li"), "class", "highlight"));
-    }, true);
-    document.getElementById("q7").addEventListener("click", function() {
+    });
+    $("#q7").click( function() {
         console.debug("q7: appendTextNodeList(createElemList(\"li\", 5),createTextNode(\"This is a textnode.\"))" + appendTextNodeList(createElemList("li", 5), createTextNode("This is a textnode")));
-    }, true);
+    });
 }
 
 //Question 1
