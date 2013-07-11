@@ -34,22 +34,19 @@ function assignListeners() {
 //# Create a Node, "li" and "ol" for example
 function createElem(elem) {
     console.debug("start createElem: elem: " + elem);
-    var newelem;
-    newelem = document.createElement(elem);
-    console.debug("createElem: end: returns: " + elem);
+    var newelem = $("<" + elem + ">")[0] ;
+    console.debug("createElem: end: returns: " + newelem.nodeName);
     return newelem;
 }
 
 //Question 2
 //# Create an array of Nodes
-function createElemList(elem, n) {
+function createElemList(elem, nn) {
     var list = [];
-    for (var i = 0; i < n; i++) {
+    for (var ii = 0; ii < nn; ii++) {
         //list.push(document.createElement(elem));
        list.push(createElem(elem));
-      // list.push("lilili");
-        console.log("Item: " + i);
-
+        console.log("Item: " + ii);
     }
     console.log("List: " + list);
     return list;
@@ -59,6 +56,7 @@ function createElemList(elem, n) {
 //# Create a Text Node
 function createTextNode(text) {
     var textnode;
+    //$().text("my text");
     textnode = document.createTextNode(text);
     return textnode;
 }
@@ -66,8 +64,9 @@ function createTextNode(text) {
 //Question 4
 //# Append a Text Node to a Node
 function appendTextNode(elem, text) {
-    elem.appendChild(document.createTextNode(text));
+    //elem.appendChild(document.createTextNode(text));
     //elem.appendChild(text);
+    $(elem).text(text);
     console.log("elem: " + elem.nodeName + " : " + elem.textContent);
 }
 
@@ -76,7 +75,8 @@ function appendTextNode(elem, text) {
 function addAttrNode(elem, attr, text) {
    // var attribute = document.createAttribute(attr, text);
     //elem.setAttribute(attribute);
-    elem.setAttribute(attr, text);
+    //elem.setAttribute(attr, text);
+    $(elem).attr(attr, text);
     console.log("Element and attr value: " + elem);
 }
 
@@ -84,6 +84,7 @@ function addAttrNode(elem, attr, text) {
 //# Change the style assigned to an element.
 function appendAttr(elem, attr, value) {
     addAttrNode(elem, attr, value);
+   // $(elem).attr(attr, text);
     console.debug("elem: " + elem.nodeName + ", attribute name: " + elem.attributes.getNamedItem(attr).nodeName + ", attribute value: " + elem.attributes.getNamedItem(attr).value + ", innerHTML: " + elem.innerHTML);
 
 }
@@ -92,7 +93,8 @@ function appendAttr(elem, attr, value) {
 //# Provide a list of elements and append the same text node to each one. 
 function appendTextNodeList(list, textnode) {
     for (var ii = 0; ii < list.length; ii++) {
-       appendTextNode(list[ii], textnode.nodeValue);
+       appendTextNode(list[ii], textnode.nodeValue);           
+       //$(elem).text(text);
         console.log(list[ii]);
     }
     return list;
